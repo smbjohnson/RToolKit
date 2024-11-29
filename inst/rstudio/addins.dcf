@@ -1,0 +1,4 @@
+Name: From The Top
+Description: Runs a script from the top with no libraries and a clear environment
+Binding: from_the_top
+Interactive: false

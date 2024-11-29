@@ -16,6 +16,7 @@
 
 group_name_split <- function(.tbl , ..., .keep = TRUE, .sep = '_') {
   ## creating a grouping variable
+  grp_var <- NULL
   tmp <- .tbl |>
     tidyr::unite(col = 'grp_var', ... = ..., remove = FALSE, sep = .sep) |>
     dplyr::group_split(... = ..., .keep = .keep)
