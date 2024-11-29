@@ -10,7 +10,10 @@ from_the_top <- function() {
   pacman::p_unload(pacman::p_loaded(), character.only = TRUE)
   path <- rstudioapi::getActiveDocumentContext()
   print('starting script')
+  start.time <- Sys.time()
   source(path$path)
-  print('finished script')
+  end.time <- Sys.time()
+  time.taken <- round(end.time - start.time,2)
+  print('finished script. Took ', time.taken, 'seconds')
 }
 
