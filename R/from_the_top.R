@@ -5,7 +5,8 @@
 #' @export
 
 from_the_top <- function() {
-  clear()
+  to_remove <- ls(envir = globalenv())
+  rm(list = to_remove, envir = globalenv())
   pacman::p_unload(pacman::p_loaded(), character.only = TRUE)
   path <- rstudioapi::getActiveDocumentContext()
   print('starting script')
