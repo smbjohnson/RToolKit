@@ -2,4 +2,6 @@
 
 export(clear)
 export(from_the_top)
+export(from_the_top_bkgd)
+export(from_the_top_bkgd_output)
 export(group_name_split)

@@ -2,3 +2,13 @@ Name: From The Top
 Description: Runs a script from the top with no libraries and a clear environment
 Binding: from_the_top
 Interactive: false
+
+Name: From The Top Background
+Description: Runs a script in the background and doesn't return output to global environement
+Binding: from_the_top_bkgd
+Interactive: false
+
+Name: From The Top Background Output
+Description: Runs a script in the background and returns output to global environemnt
+Binding: from_the_top_bkgd_output
+Interactive: false

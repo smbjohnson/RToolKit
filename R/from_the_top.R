@@ -17,3 +17,28 @@ from_the_top <- function() {
   print('finished script. Took ', time.taken, 'seconds')
 }
 
+#' A add in that runs a script in the background but doesn't return output
+#'
+#' @return Everything is run in the background and nothing is output to the global environment
+#'
+#' @export
+
+from_the_top_bkgd <- function() {
+  path <- rstudioapi::getActiveDocumentContext()
+  rstudioapi::jobRunScript(path = path$path,
+                           importEnv = FALSE,
+                           exportEnv = '')
+}
+
+#' A add in that runs a script in the background and returns output to global environment
+#'
+#' @return Everything is run in the background and output is returned to global environment
+#'
+#' @export
+
+from_the_top_bkgd_output <- function() {
+  path <- rstudioapi::getActiveDocumentContext()
+  rstudioapi::jobRunScript(path = path$path,
+                           importEnv = FALSE,
+                           exportEnv = 'R_GlobalEnv')
+}
